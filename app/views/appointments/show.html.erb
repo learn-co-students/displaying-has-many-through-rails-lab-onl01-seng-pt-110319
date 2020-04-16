@@ -1,0 +1,14 @@
+<h1>Appointments#show</h1>
+<p>Find me in app/views/appointments/show.html.erb</p>
+
+
+<h3>Appointments Doctor</h3>
+<%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor_id)%>
+<br>
+<h3>Appointments Patient</h3>
+<%= link_to @appointment.patient.name, patient_path(@appointment.patient_id)%>
+<br>
+<h3>Appointments Date & Time</h3>
+<%= @appointment.appointment_datetime.strftime("%B %d, %Y   %H:%M")  %>
+
+
